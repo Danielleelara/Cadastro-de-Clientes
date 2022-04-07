@@ -1,6 +1,26 @@
-.link {
-    margin-top: 20em;
-    padding: 1em;
-    border: 1px solid black;
-    
+
+.button {
+    background-color:#816882;
+    border: none;
+    color: aliceblue;
+    border-radius: 5%;
+    height: 2.5em;
+    width: 10em;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.button:hover {
+    background-color:rgb(124, 128, 131);
+}
+
+.button_text {
+    text-decoration: none;
+    color: rgb(210, 215, 219);
+    font-weight: bold;
+    padding: 10px;
+}
+.button_text:hover {
+    color: white;
 }

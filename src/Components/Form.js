@@ -22,9 +22,11 @@ const Form = () => {
     });
   })();
 
+  
+
   return (
     <>
-      <h1 className={styles.title}>Cadastro de Clientes</h1>
+      <h1 className={styles.title}>Cadastro</h1>
       <form className="row g-3 needs-validation" novalidate>
         <div className="col-md-6">
           <label for="validationCustom01" className="form-label">
@@ -129,24 +131,7 @@ const Form = () => {
           <div class="invalid-feedback">Estado inválido</div>
         </div>
         <div class="col-12">
-          <div class="form-check">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="invalidCheck"
-              required
-            />
-            <label class="form-check-label" for="invalidCheck">
-              Concordo com os termos e condições
-            </label>
-            <div class="invalid-feedback">
-              You must agree before submitting.
-            </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <button class="btn btn-secondary" type="submit">
+          <button class="btn btn-primary" type="submit">
             Enviar
           </button>
         </div>

@@ -8,12 +8,11 @@ const Clients = () => {
 
   return (
     <PageWrapper>
-      <div>
-        <Link to={`/create`} className={styles.link}>
-          Adicionar Cliente
+      <div className={styles.button}>
+        <Link className={styles.button_text} to={`/create`}>
+          Adicionar
         </Link>
       </div>
-      {/* <Form/> */}
       <Table />
     </PageWrapper>
   );

@@ -7,7 +7,7 @@ const Header = () => {
         <div className="container-fluid">
           <Link to={`/`} className="navbar-text">Login</Link>
           <Link to={`/clients`} className="navbar-text">Clientes</Link>
-          <Link to={`/details/`} className="navbar-text">Detalhes</Link>
+          <Link to={`/details/:id`} className="navbar-text">Detalhes</Link>
         </div>
       </nav>
     </header>
