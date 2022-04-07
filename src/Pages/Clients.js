@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import styles from './Clients.module.css';
 
 const Clients = () => {
-   
 
   return (
     <PageWrapper>
@@ -15,6 +14,7 @@ const Clients = () => {
       </div>
       <Table />
     </PageWrapper>
+
   );
 };
 

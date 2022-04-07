@@ -1,6 +1,9 @@
 .container_table{
     margin: auto!important;
-    margin-top: 50px!important;
-    width: 50rem;
+    margin-top: 5rem!important;
+    width: 50rem;  
 }
+.container_table li {
+    display: absolute;
+}   
 
