@@ -21,10 +21,17 @@
     text-decoration: none;
     color: rgb(210, 215, 219);
     font-weight: bold;
+    margin-bottom: 2em;
 }
 
 .button:hover {
     background-color:rgb(124, 128, 131);
     color: white;
+}
+
+@media screen and (min-width: 280px) {
+    .button{
+        width: 5em;
+    }
 }
 
