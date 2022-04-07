@@ -2,7 +2,29 @@
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-size: 3em;
-    color:rgb(34, 29, 201) ;
+    font-size: 5em;
+    margin-bottom: 1.5rem;
+    color: #816882;
+    font-family: 'Caveat', cursive;
+}
+
+.button {
+    background-color:#816882;
+    border: none;
+    color: aliceblue;
+    border-radius: 5%;
+    height: 2.5em;
+    width: 20em;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color: rgb(210, 215, 219);
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color:rgb(124, 128, 131);
+    color: white;
 }
 

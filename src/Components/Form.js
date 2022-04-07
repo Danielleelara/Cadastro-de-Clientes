@@ -131,7 +131,7 @@ const Form = () => {
           <div class="invalid-feedback">Estado inválido</div>
         </div>
         <div class="col-12">
-          <button class="btn btn-primary" type="submit">
+          <button class={styles.button} type="submit">
             Enviar
           </button>
         </div>
