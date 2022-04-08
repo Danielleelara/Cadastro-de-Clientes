@@ -1,9 +1,33 @@
 .container_table{
-    margin: auto!important;
-    margin-top: 5rem!important;
-    width: 50rem;  
+    margin: auto;
+    margin-top: 5rem;
+    width: 40rem;  
 }
+
 .container_table li {
     display: absolute;
-}   
+}  
 
+@media screen and (min-width: 375px) {
+    .container_table {
+        width: 2rem;  
+    }
+}
+
+@media screen and (min-width: 360px) {
+    .container_table {
+        width: 20rem;  
+    }
+}
+
+@media screen and (min-width: 280px) {
+    .container_table {
+        width: 16rem;  
+    }
+}
+
+@media screen and (min-width: 280px) {
+    .container_table {
+        width: 40rem;  
+    }
+}
