@@ -19,4 +19,38 @@
     color: white;
 }
 
+@media screen and (min-width: 375px){
+    .button{
+        margin-left: 3em;
+    }
+}
 
+@media screen and (min-width: 360px){
+    .button{
+        margin-left: 2.5em;
+    }
+}
+
+@media screen and (min-width: 360px){
+    .button{
+        margin-left: 4em;
+    }
+}
+
+@media screen and (min-width: 280px){
+    .button{
+        margin-left: 0.1em;
+    }
+}
+
+@media screen and (min-width: 414px){
+    .button{
+        margin-left: 5em;
+    }
+}
+
+@media screen and (min-width: 412px){
+    .button{
+        margin-left: 15em;
+    }
+}
