@@ -28,7 +28,7 @@ const Form = () => {
     <>
       <h1 className={styles.title}>Cadastro</h1>
       <form className="row g-3 needs-validation" novalidate>
-        <div className="col-md-6">
+        <div className="col-md-8">
           <label for="validationCustom01" className="form-label">
             Nome Completo
           </label>
@@ -40,16 +40,13 @@ const Form = () => {
           />
           <div className="valid-feedback">Looks good!</div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-4">
           <label for="validationCustomUsername" className="form-label">
-            Usuário
+            Telefone
           </label>
           <div className="input-group has-validation">
-            <span className="input-group-text" id="inputGroupPrepend">
-              @
-            </span>
             <input
-              type="text"
+              type="phone"
               className="form-control"
               id="validationCustomUsername"
               aria-describedby="inputGroupPrepend"
@@ -79,7 +76,7 @@ const Form = () => {
           <input
             className="form-control"
             id="validationCustom04"
-            required
+            disabled
           ></input>
           <div className="invalid-feedback">Endereço inválido</div>
         </div>
@@ -114,7 +111,7 @@ const Form = () => {
           <input
             className="form-control"
             id="validationCustom04"
-            required
+            disabled
           ></input>
           <div className="invalid-feedback">Cidade inválida</div>
         </div>
@@ -124,14 +121,14 @@ const Form = () => {
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="validationCustom05"
-            required
+            disabled
           />
-          <div class="invalid-feedback">Estado inválido</div>
+          <div className="invalid-feedback">Estado inválido</div>
         </div>
-        <div class="col-12">
-          <button class={styles.button} type="submit">
+        <div className="col-12">
+          <button className={styles.button} type="submit">
             Enviar
           </button>
         </div>
