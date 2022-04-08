@@ -4,14 +4,14 @@
     border: none;
     color: aliceblue;
     border-radius: 5%;
-    height: 5.5em;
-    width: 20em;
+    height: 2.5em;
+    width: 10em;
     cursor: pointer;
     text-align: center;
-    margin: auto;
     text-decoration: none;
-    color: rgb(210, 215, 219);
     font-weight: bold;
+    margin-top: 2em;
+    margin-left: 15em;
 }
 
 .button:hover {

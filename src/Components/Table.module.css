@@ -1,12 +1,17 @@
 .container_table{
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 1rem;
     width: 40rem;  
+    
 }
 
 .container_table li {
-    display: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }  
+
 
 @media screen and (min-width: 375px) {
     .container_table {
@@ -26,8 +31,9 @@
     }
 }
 
-@media screen and (min-width: 280px) {
+@media screen and (min-width: 1024px) {
     .container_table {
         width: 40rem;  
     }
+
 }
