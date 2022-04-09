@@ -18,19 +18,21 @@ const Details = () => {
     }
     getClient(id);
   }, [id]);
-  console.log(client);
+  
 
   return (
     <PageWrapper>
       <main className={styles.container}>
         {loading ? (
-          <div className="spinner-border text-secondary" role="status">
+          <div className="text-center">
+          <div className="spinner-border" role="status">
             <span className="sr-only"></span>
           </div>
+        </div>
         ) : (
           <>
             <h1 className={styles.title}>{client?.name}</h1>
-            <ul className="list-group list-group-flush">
+            <ul className="list-group list-group-flush" key={client.id}>
               <li className="list-group-item">Telefone: {client?.phone}</li>
               <li className="list-group-item">CEP: {client?.address?.cep}</li>
               <li className="list-group-item">

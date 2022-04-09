@@ -27,9 +27,9 @@ const Form = () => {
   return (
     <>
       <h1 className={styles.title}>Cadastro</h1>
-      <form className="row g-3 needs-validation" novalidate>
+      <form className="row g-3 needs-validation" noValidate>
         <div className="col-md-8">
-          <label for="validationCustom01" className="form-label">
+          <label htmlFor="validationCustom01" className="form-label">
             Nome Completo
           </label>
           <input
@@ -41,7 +41,7 @@ const Form = () => {
           <div className="valid-feedback">Looks good!</div>
         </div>
         <div className="col-md-4">
-          <label for="validationCustomUsername" className="form-label">
+          <label htmlFor="validationCustomUsername" className="form-label">
             Telefone
           </label>
           <div className="input-group has-validation">
@@ -58,7 +58,7 @@ const Form = () => {
           </div>
         </div>
         <div className="col-md-3">
-          <label for="validationCustom05" className="form-label">
+          <label htmlFor="validationCustom05" className="form-label">
             CEP
           </label>
           <input
@@ -70,7 +70,7 @@ const Form = () => {
           <div className="invalid-feedback">CEP inválido</div>
         </div>
         <div className="col-md-6">
-          <label for="validationCustom04" className="form-label">
+          <label htmlFor="validationCustom04" className="form-label">
             Rua/Av/Travessa
           </label>
           <input
@@ -81,31 +81,31 @@ const Form = () => {
           <div className="invalid-feedback">Endereço inválido</div>
         </div>
         <div className="col-md-3">
-          <label for="validationCustom03" className="form-label">
+          <label htmlFor="validationCustom03" className="form-label">
             Número
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="validationCustom05"
             required
           />
-          <div class="invalid-feedback">Número inválido</div>
+          <div className="invalid-feedback">Número inválido</div>
         </div>
         <div className="col-md-5">
-          <label for="validationCustom03" className="form-label">
+          <label htmlFor="validationCustom03" className="form-label">
             Complemento
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="validationCustom05"
             required
           />
-          <div class="invalid-feedback">Complemento inválido</div>
+          <div className="invalid-feedback">Complemento inválido</div>
         </div>
         <div className="col-md-4">
-          <label for="validationCustom04" className="form-label">
+          <label htmlFor="validationCustom04" className="form-label">
             Cidade
           </label>
           <input
@@ -116,7 +116,7 @@ const Form = () => {
           <div className="invalid-feedback">Cidade inválida</div>
         </div>
         <div className="col-md-3">
-          <label for="validationCustom03" className="form-label">
+          <label htmlFor="validationCustom03" className="form-label">
             Estado
           </label>
           <input

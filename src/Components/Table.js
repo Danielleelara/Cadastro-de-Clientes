@@ -4,10 +4,9 @@ import { api } from "../services/api";
 import { CgEye, CgTrash } from "react-icons/cg";
 import styles from "./Table.module.css";
 
-
 const Table = () => {
-
   const [clients, setClients] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getClients() {
@@ -15,27 +14,34 @@ const Table = () => {
       const { clients } = response.data;
 
       setClients(clients);
+      setLoading(false);
     }
     getClients();
   }, []);
 
   return (
     <>
-      <table className={styles.container_table}>
+      <div className={styles.container_table}>
         <ul className="list-group">
-          {clients.map((client) => 
-            <li className="list-group-item">
-              {client.name}
-              <span>
-                <CgTrash size={20} color="gray"></CgTrash>
-                <Link to={`/details/${client.id}`}>
-                  <CgEye size={20} color="gray" />
-                </Link>
-              </span>
-            </li>
+          {loading ? (
+            <div className="text-center">
+              <div className="spinner-border text-light" role="status"></div>
+            </div>
+          ) : (
+            clients.map((client) => (
+              <li key={client.id} className="list-group-item">
+                {client.name}
+                <span>
+                  <CgTrash size={20} color="gray"></CgTrash>
+                  <Link to={`/details/${client.id}`}>
+                    <CgEye size={20} color="gray" />
+                  </Link>
+                </span>
+              </li>
+            ))
           )}
         </ul>
-      </table>
+      </div>
     </>
   );
 };
