@@ -5,6 +5,15 @@ Este projeto foi criado com o intuito de facilitar a gestão de uma base de clie
 Link para visualizar no browser: colocar o link do deploy
 ## Telas desenvolvidas
 
+![image](https://user-images.githubusercontent.com/78480991/162593323-1b80e2f5-5a58-453e-9967-17e57bec7ef9.png)
+
+![image](https://user-images.githubusercontent.com/78480991/162593318-c4cd84f5-0bd1-45b1-81ea-c535c40bfcb1.png)
+
+![image](https://user-images.githubusercontent.com/78480991/162593332-270623bb-bec5-4595-92fd-a0b4a69371c8.png)
+
+![image](https://user-images.githubusercontent.com/78480991/162593342-83cd70f3-1c59-4ca6-a92a-62b13c70abc1.png)
+
+
 
 ## Requisitos de ambiente e dependências
 
@@ -35,5 +44,4 @@ npm install --save-dev miragejs
 6. Agora é só rodar o comando abaixo para rodar o projeto no Browser
 npm start
 
-Link da apresentação do projeto
 
