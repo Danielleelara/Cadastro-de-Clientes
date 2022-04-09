@@ -6,7 +6,7 @@ import styles from "./Clients.module.css";
 const Clients = () => {
   return (
     <PageWrapper>
-        <Link to={`/create`}>
+        <Link className={styles.link} to={`/create`}>
           <button className={styles.button}>Adicionar</button>
         </Link>
       <Table />

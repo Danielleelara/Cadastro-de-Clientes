@@ -25,10 +25,9 @@ const Details = () => {
       <main className={styles.container}>
         {loading ? (
           <div className="text-center">
-          <div className="spinner-border" role="status">
-            <span className="sr-only"></span>
+          <div className="spinner-border text-dark" role="status">
           </div>
-        </div>
+          </div>
         ) : (
           <>
             <h1 className={styles.title}>{client?.name}</h1>

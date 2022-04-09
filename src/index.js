@@ -1,12 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
 import { createServer, Model } from "miragejs";
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
+
 
 createServer({
   models: {
     client: Model,
+    cep: Model,
   },
   seeds(server) {
     server.db.loadData({
@@ -67,7 +69,10 @@ createServer({
     });
   },
   routes() {
+    this.passthrough();
+
     this.namespace = "api";
+    this.urlPrefix = "http://localhost:8080";
 
     this.get("/clients", (schema) => {
       return schema.clients.all();
@@ -90,12 +95,16 @@ createServer({
 
       return schema.clients.find(id).destroy();
     });
+
+    this.passthrough("https://opencep.com/v1/**");
   },
 });
 
-ReactDOM.render(
+const container = document.getElementById("root");
+const root = createRoot(container);
+
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );

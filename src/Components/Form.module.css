@@ -29,6 +29,10 @@
     color: white;
 }
 
+form label {
+    color: rgb(210, 215, 219);
+}
+
 @media screen and (min-width: 280px) {
     .button{
         width: 5em;
