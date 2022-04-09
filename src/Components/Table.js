@@ -4,7 +4,9 @@ import { api } from "../services/api";
 import { CgEye, CgTrash } from "react-icons/cg";
 import styles from "./Table.module.css";
 
+
 const Table = () => {
+
   const [clients, setClients] = useState([]);
 
   useEffect(() => {
@@ -17,8 +19,6 @@ const Table = () => {
     getClients();
   }, []);
 
-  console.log(clients);
-
   return (
     <>
       <table className={styles.container_table}>
@@ -28,7 +28,7 @@ const Table = () => {
               {client.name}
               <span>
                 <CgTrash size={20} color="gray"></CgTrash>
-                <Link to={`/details/1`}>
+                <Link to={`/details/${client.id}`}>
                   <CgEye size={20} color="gray" />
                 </Link>
               </span>
