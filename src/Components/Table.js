@@ -1,46 +1,39 @@
-import styles from "./Table.module.css";
-import { CgTrash, CgEye } from "react-icons/cg";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { api } from "../services/api";
+import { CgEye, CgTrash } from "react-icons/cg";
+import styles from "./Table.module.css";
 
 const Table = () => {
+  const [clients, setClients] = useState([]);
+
+  useEffect(() => {
+    async function getClients() {
+      const response = await api.get("/clients");
+      const { clients } = response.data;
+
+      setClients(clients);
+    }
+    getClients();
+  }, []);
+
+  console.log(clients);
+
   return (
     <>
       <table className={styles.container_table}>
         <ul className="list-group">
-          <li className="list-group-item">
-            Lara de Souza Andrade
-            <span>
-              <CgTrash
-                size={20}
-                color="gray"
-              ></CgTrash>
-              <Link to={`/details/1`}>
-                <CgEye size={20} color="gray" />
-              </Link>
-            </span>
-          </li>
-          <li className="list-group-item">Danielle de Souza Andrade
-          <span>
-              <CgTrash
-                size={20}
-                color="gray"
-              ></CgTrash>
-              <Link to={`/details/1`}>
-                <CgEye size={20} color="gray" />
-              </Link>
-            </span>
-          </li>
-          <li className="list-group-item">Carlos Eugenio Costa Barros Jr
-          <span>
-              <CgTrash
-                size={20}
-                color="gray"
-              ></CgTrash>
-              <Link to={`/details/1`}>
-                <CgEye size={20} color="gray" />
-              </Link>
-            </span>
-          </li>
+          {clients.map((client) => 
+            <li className="list-group-item">
+              {client.name}
+              <span>
+                <CgTrash size={20} color="gray"></CgTrash>
+                <Link to={`/details/1`}>
+                  <CgEye size={20} color="gray" />
+                </Link>
+              </span>
+            </li>
+          )}
         </ul>
       </table>
     </>
