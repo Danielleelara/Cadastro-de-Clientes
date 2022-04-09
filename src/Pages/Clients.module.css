@@ -1,9 +1,6 @@
+
 .link {
-    width: 6em;
-}
-.button {
     background-color:#816882;
-    border: none;
     color: aliceblue;
     border-radius: 5%;
     height: 2.5em;
@@ -16,7 +13,17 @@
     margin-left: 15em;
 }
 
-.button:hover {
+.link button {
+    border-radius: 5%;
+    color: aliceblue;
+    border: none;
+    background-color:#816882;
+    height: 2.5em;
+    width: 6em;
+    font-weight: bold;
+}
+
+.link button:hover {
     background-color:rgb(124, 128, 131);
     color: white;
 }
