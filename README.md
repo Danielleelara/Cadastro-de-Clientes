@@ -1,8 +1,8 @@
 # Lista de Clientes
 
-Este projeto foi criado com o intuito de facilitar a gestão de uma base de clientes e visualização das suas informações. O projeto foi desenvolvido em ReactJs a partir da criação de uma SPA, usando react-routes para a implementação das rotas, o Axios para a busca dos dados na API e o Framework CSS Bootstrap. A simulação da API foi feita com Miragejs e foi usada a API 'https://opencep.com/V1' para a busca de CEPs válidos e demais dados.
+Este projeto foi criado com o intuito de facilitar a gestão de uma base de clientes e visualização das suas informações. O projeto foi desenvolvido em ReactJs a partir da criação de uma SPA, usando react-routes para a implementação das rotas, o Axios para a busca dos dados na API e o Framework CSS Bootstrap. A simulação da API foi feita com a biblioteca Miragejs e foi usada a API 'https://opencep.com/V1' para a busca de CEPs válidos e demais dados. As páginas foram desenvolvidas de forma responsiva para que sejam adaptadas para vários tamanhos de tela.
 
-Link para visualizar no browser: colocar o link do deploy
+Link para visualizar no browser:
 ## Telas desenvolvidas
 
 ![image](https://user-images.githubusercontent.com/78480991/162593323-1b80e2f5-5a58-453e-9967-17e57bec7ef9.png)
@@ -14,13 +14,13 @@ Link para visualizar no browser: colocar o link do deploy
 ![image](https://user-images.githubusercontent.com/78480991/162593342-83cd70f3-1c59-4ca6-a92a-62b13c70abc1.png)
 
 
-
 ## Requisitos de ambiente e dependências
 
 ### Node v17.4.0 (npm v8.3.1) 
 ### React-router-dom (será instalado rodando o comando 3)
 ### Axios (será instalado rodando o comando 4) 
-### Miragejs (será instalado no comando )
+### Miragejs (será instalado no comando 5)
+### React-icons (será instalado no comando 6)
 
 ## Configurando o ambiente
 
@@ -30,18 +30,27 @@ O primeiro passo é clonar o projeto
 https://github.com/Danielleelara/cadastro-de-clientes
 
 2. Na pasta raiz do projeto, rodar o comando abaixo para instalar as dependências.
+
 npm install
 
 3. Em seguida na mesma pasta, rodar o comando abaixo para instalar o react router.
+
 npm i react-router-dom
 
 4. Para instalar o Axios, rodar o comando seguinte:
+
 npm i axios
 
-5. Agora instale o Miragejs
+5. Agora instale o Miragejs.
+
 npm install --save-dev miragejs
 
-6. Agora é só rodar o comando abaixo para rodar o projeto no Browser
+6. Instale também o react-icons. 
+
+npm install react-icons --save
+
+7. Agora é só rodar o comando abaixo para rodar o projeto no Browser.
+
 npm start
 
 
