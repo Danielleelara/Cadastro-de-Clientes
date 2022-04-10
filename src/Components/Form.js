@@ -1,11 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 import { api } from "../services/api";
 import styles from "./Form.module.css";
 
+
 const Form = () => {
   const [form, setForm] = useState({});
-  const [loading, setLoading] = useState('');
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const submit = async (e) => {
     e.preventDefault();
@@ -23,11 +26,10 @@ const Form = () => {
       },
     };
 
-    setLoading(false)
-    const response = await api.post("/clients", client);
-    setLoading(true)
-    // Redirect Tela Home
-    console.log(response.data);
+    setLoading(true);
+    await api.post("/clients", client);
+    setLoading(false);
+    navigate("/clients", {replace: true})
   };
 
   const handleChange = (e) => {
@@ -51,13 +53,14 @@ const Form = () => {
       <h1 className={styles.title}>Cadastro</h1>
       <form onSubmit={submit} className="row g-3 needs-validation" noValidate>
         <div className="col-md-8">
-          <label htmlFor="validationCustom01" className="form-label">
+          <label htmlFor="name" className="form-label">
             Nome Completo
           </label>
           <input
+            placeholder="Digite seu nome"
             type="text"
             className="form-control"
-            id="validationCustom01"
+            id="name"
             required
             name="name"
             onChange={handleChange}
@@ -65,14 +68,15 @@ const Form = () => {
           <div className="valid-feedback">Looks good!</div>
         </div>
         <div className="col-md-4">
-          <label htmlFor="validationCustomUsername" className="form-label">
+          <label htmlFor="phone" className="form-label">
             Telefone
           </label>
           <div className="input-group has-validation">
             <input
+              placeholder="(xx)xxxx-xx-xx"
               type="phone"
               className="form-control"
-              id="validationCustomUsername"
+              id="phone"
               aria-describedby="inputGroupPrepend"
               name="phone"
               onChange={handleChange}
@@ -88,6 +92,7 @@ const Form = () => {
             CEP
           </label>
           <input
+            placeholder="00000000"
             type="number"
             className="form-control"
             id="cep"
@@ -117,7 +122,7 @@ const Form = () => {
             Número
           </label>
           <input
-            type="text"
+            type="number"
             className="form-control"
             id="number"
             name="number"
@@ -171,11 +176,17 @@ const Form = () => {
         </div>
         <div className="col-12">
           <button
-            disabled={!form.state || loading}
+            disabled={!form.state}
             className={styles.button}
             type="submit"
           >
-            Enviar
+            {
+              loading ? (
+                <div className="text-center">
+                  <div className="spinner-border text-light" role="status"></div>
+                </div>
+              ): 'Enviar'
+            }
           </button>
         </div>
       </form>

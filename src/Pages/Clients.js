@@ -7,7 +7,7 @@ const Clients = () => {
   return (
     <PageWrapper>
         <Link className={styles.link} to={`/create`}>
-          <button className={styles.button}>Adicionar</button>
+          <button>Adicionar</button>
         </Link>
       <Table />
       <div>

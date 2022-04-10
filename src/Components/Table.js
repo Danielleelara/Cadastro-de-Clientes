@@ -19,6 +19,16 @@ const Table = () => {
     getClients();
   }, []);
 
+  const handleClientDeletion = async (clientId) => {
+    if(window.confirm('Deseja excluir?')){
+      const newClients = clients.filter((client) => client.id !== clientId);
+      await api.delete(`/clients/${clientId}`);
+      setClients(newClients);
+    }
+  };
+
+
+
   return (
     <>
       <div className={styles.container_table}>
@@ -32,9 +42,9 @@ const Table = () => {
               <li key={client.id} className="list-group-item">
                 {client.name}
                 <span>
-                  <CgTrash size={20} color="gray"></CgTrash>
+                  <CgTrash   onClick={() => handleClientDeletion(client.id)} size={20} color="gray"></CgTrash>
                   <Link to={`/details/${client.id}`}>
-                    <CgEye size={20} color="gray" />
+                    <CgEye  size={20} color="gray" />
                   </Link>
                 </span>
               </li>
