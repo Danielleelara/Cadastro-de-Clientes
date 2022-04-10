@@ -18,13 +18,12 @@ const Login = () => {
       nickname: form.nickname,
       password: form.password,
     };
-
     setLoading(true);
     const response = await fetch("http://localhost:8080/login", {
       method: "POST",
       body: JSON.stringify(user),
     });
-
+    
     setLoading(false);
     if (!!JSON.parse([response["_bodyInit"]])) {
       return navigate("/clients", { replace: true });
@@ -64,8 +63,13 @@ const Login = () => {
           />
         </div>
 
-        <button type="submit" className={styles.button}>
-          Enviar
+        <button type="submit" className={styles.button}>{
+              loading ? (
+                <div className="text-center">
+                  <div className="spinner-border text-light" role="status"></div>
+                </div>
+              ): 'Enviar'
+            }
         </button>
       </form>
     </main>
