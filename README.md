@@ -17,10 +17,10 @@ Link para visualizar no browser: https://cadastro-de-clientes.vercel.app/
 ## Requisitos de ambiente e dependências
 
 ### Node v17.4.0 (npm v8.3.1) 
-### React-router-dom (será instalado rodando o comando 3)
-### Axios (será instalado rodando o comando 4) 
-### Miragejs (será instalado no comando 5)
-### React-icons (será instalado no comando 6)
+### React-router-dom 
+### Axios 
+### Miragejs 
+### React-icons 
 
 ## Configurando o ambiente
 
@@ -33,23 +33,7 @@ https://github.com/Danielleelara/cadastro-de-clientes
 
 npm install
 
-3. Em seguida na mesma pasta, rodar o comando abaixo para instalar o react router.
-
-npm i react-router-dom
-
-4. Para instalar o Axios, rodar o comando seguinte:
-
-npm i axios
-
-5. Agora instale o Miragejs.
-
-npm install --save-dev miragejs
-
-6. Instale também o react-icons. 
-
-npm install react-icons --save
-
-7. Agora é só rodar o comando abaixo para rodar o projeto no Browser.
+3. Agora é só rodar o comando abaixo para rodar o projeto no Browser.
 
 npm start
 
