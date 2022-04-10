@@ -1,8 +1,8 @@
 # Lista de Clientes
 
-Este projeto foi criado com o intuito de facilitar a gestão de uma base de clientes e visualização das suas informações. O projeto foi desenvolvido em ReactJs a partir da criação de uma SPA, usando react-routes para a implementação das rotas, o Axios para a busca dos dados na API e o Framework CSS Bootstrap. A simulação da API foi feita com a biblioteca Miragejs e foi usada a API 'https://opencep.com/V1' para a busca de CEPs válidos e demais dados. As páginas foram desenvolvidas de forma responsiva para que sejam adaptadas para vários tamanhos de tela.
+Este projeto foi criado com o intuito de facilitar a gestão de uma base de clientes e visualização das suas informações. O projeto foi desenvolvido em ReactJs a partir da criação de uma SPA, usando react-routes para a implementação das rotas, o Axios para a busca dos dados na API e o Framework CSS Bootstrap. A simulação da API foi feita com a biblioteca Miragejs e foi usada a API https://opencep.com/V1 ara a busca de CEPs válidos e demais dados. As páginas foram desenvolvidas de forma responsiva para que sejam adaptadas para vários tamanhos de tela.
 
-Link para visualizar no browser:
+Link para visualizar no browser: https://cadastro-de-clientes.vercel.app/
 ## Telas desenvolvidas
 
 ![image](https://user-images.githubusercontent.com/78480991/162593323-1b80e2f5-5a58-453e-9967-17e57bec7ef9.png)
