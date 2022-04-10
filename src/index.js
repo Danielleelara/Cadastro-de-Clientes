@@ -8,7 +8,7 @@ import "./index.css";
 createServer({
   models: {
     client: Model,
-    cep: Model,
+    user: Model,
   },
   seeds(server) {
     server.db.loadData({
@@ -66,13 +66,29 @@ createServer({
           },
         },
       ],
+      users: [
+        {
+          nickname: "zitrino",
+          password: "venhaserfeliz",
+        },
+      ],
     });
   },
   routes() {
     this.passthrough();
 
-    this.namespace = "api";
     this.urlPrefix = "http://localhost:8080";
+
+    this.post("/login", (schema, request) => {
+      const login = JSON.parse(request.requestBody);
+
+      return schema.users.findBy({
+        nickname: login.nickname,
+        password: login.password,
+      });
+    });
+
+    this.namespace = "api";
 
     this.get("/clients", (schema) => {
       return schema.clients.all();
